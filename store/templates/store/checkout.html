@@ -1,0 +1,10 @@
+{% extends 'store/base.html' %}
+{% block content %}
+<h2>Checkout</h2>
+<p>Total Amount: ${{ order.get_cart_total }}</p>
+<form method="post">
+    {% csrf_token %}
+    <p>Simulated Payment Form</p>
+    <button type="submit">Confirm and Pay</button>
+</form>
+{% endblock %}
